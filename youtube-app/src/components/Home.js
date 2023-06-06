@@ -3,6 +3,7 @@ import './Home.css'
 import { useEffect, useState } from 'react';
 import { getAllVideos } from '../api/fetch';
 import { useNavigate } from 'react-router-dom';
+import VideoPage from './VideoPage';
 
 function Home() {
 
@@ -33,10 +34,13 @@ function Home() {
                 allVideos.map((video, index) => {
                     // console.log(video)
                     let popularVImg = video.snippet.thumbnails.medium.url;
+                
                     return(
+                        
                       <li  onClick={() => handleClick(video.id)} key={index}>
                           <img src={popularVImg} alt='pop-vid-thumbnail'/>
                           <h2>{video.snippet.title}</h2>
+                          <VideoPage video={video} />
                       </li>
                     )
                 })
