@@ -1,0 +1,29 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(224, 108, 30);
+    padding: 10px;
+  }
+  
+  .logo span {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    padding-left: 15px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    padding-top: 10px;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 20px;
+  }
