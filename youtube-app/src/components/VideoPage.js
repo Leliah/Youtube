@@ -1,0 +1,11 @@
+
+
+
+export default function VideoPage({ show }) {
+  return (
+    <div>
+        <h1> Hello</h1>
+    </div>
+  );
+}
+

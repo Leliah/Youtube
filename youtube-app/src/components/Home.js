@@ -2,10 +2,13 @@ import React from 'react'
 import './Home.css'
 import { useEffect, useState } from 'react';
 import { getAllVideos } from '../api/fetch';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
 
     const [allVideos, setAllVideos] = useState([]);
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         getAllVideos()
@@ -18,7 +21,10 @@ function Home() {
            });
       }, []);
 
-
+      const handleClick = (videoId) => {
+        navigate(`/video/${videoId}`);
+        console.log("running")
+      };
 
   return (
     <div>
@@ -28,7 +34,7 @@ function Home() {
                     // console.log(video)
                     let popularVImg = video.snippet.thumbnails.medium.url;
                     return(
-                      <li key={index}>
+                      <li  onClick={() => handleClick(video.id)} key={index}>
                           <img src={popularVImg} alt='pop-vid-thumbnail'/>
                           <h2>{video.snippet.title}</h2>
                       </li>
