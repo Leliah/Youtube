@@ -3,16 +3,13 @@ import './App.css';
 import { Routes, Route} from 'react-router-dom';
 import VideoPage from './components/VideoPage';
 
-
 function App() {
   return (
     <div className="App">
       {/* <Home /> */}
       <Routes>
-    
         <Route exact path="/" element={<Home/>} />
-        <Route path="/video/:videoId" element={<VideoPage/>} />
-  
+        <Route path="/video/:id" element={<VideoPage/>} />
     </Routes>
     </div>
   );
