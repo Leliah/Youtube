@@ -1,12 +1,17 @@
 import React from 'react'
+import { Link} from 'react-router-dom';
 import './Home.css'
 import { useEffect, useState } from 'react';
-import { getAllVideos } from '../api/fetch';
+import { getAllVideos, category } from '../api/fetch';
+import VideoListing from './VideoListing';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
 
     const [allVideos, setAllVideos] = useState([]);
 
+    let navigate = useNavigate()
+;
     useEffect(() => {
         getAllVideos()
           .then((response) => {
@@ -18,6 +23,12 @@ function Home() {
            });
       }, []);
 
+      const handleClick = (videoId) => {
+        navigate(`/video/${videoId}`);
+      
+      }
+      
+
 
 
   return (
@@ -25,19 +36,22 @@ function Home() {
         <div className='most-popular-results'>
             {
                 allVideos.map((video, index) => {
-                    // console.log(video)
-                    let popularVImg = video.snippet.thumbnails.medium.url;
-                    return(
-                      <li key={index}>
-                          <img src={popularVImg} alt='pop-vid-thumbnail'/>
-                          <h2>{video.snippet.title}</h2>
-                      </li>
-                    )
-                })
+                  return <VideoListing video={video} key={video.id} index={index}/>
+                })//MAP CLOSING TAG
             }
+        </div> 
+
+        <div className='side-nav'>
+            <Link to='/'>
+              Home
+            </Link>
+            <Link to='/About'>
+              About
+            </Link>
         </div>
     </div>
   )
 }
 
 export default Home
+
