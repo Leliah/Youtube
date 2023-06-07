@@ -1,39 +1,39 @@
-import Navbar from "./components/Navbar"
-import About from "./components/About"
-import SearchBar from "./components/Searchbar"
-import Home from "./components/Home"
-import { Route, Routes } from "react-router-dom";
-import { useState } from "react";
+// import Navbar from "./components/Navbar"
+// import About from "./components/About"
+// import SearchBar from "./components/Searchbar"
+// import Home from "./components/Home"
+// import { Route, Routes } from "react-router-dom";
+// import { useState } from "react";
 
-import "./App.css";
+// import "./App.css";
 
-function App() {
+// function App() {
 
-  const [searchInput, setSearchInput] = useState("");
-  const [searchTitle, setSearchTitle] = useState("");
-  const [maxResults, setMaxResults] = useState(10);
-  const [allVid, setAllVid] = useState({});
+//   const [searchInput, setSearchInput] = useState("");
+//   const [searchTitle, setSearchTitle] = useState("");
+//   const [maxResults, setMaxResults] = useState(10);
+//   const [allVid, setAllVid] = useState({});
 
-  return (
-    <div className="App">
+//   return (
+//     <div className="App">
 
-      <Navbar />
-      <SearchBar
-        searchInput={searchInput}
-        setSearchInput={setSearchInput}
-        setSearchTitle={setSearchTitle}
-        setMaxResults={setMaxResults}
-      />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route/>
+//       <Navbar />
+//       <SearchBar
+//         searchInput={searchInput}
+//         setSearchInput={setSearchInput}
+//         setSearchTitle={setSearchTitle}
+//         setMaxResults={setMaxResults}
+//       />
+//       <Routes>
+//         <Route path="/" element={<Home />} />
+//         <Route path="/about" element={<About />} />
+//         <Route/>
        
 
-      </Routes>
+//       </Routes>
 
-    </div>
-  );
-}
+//     </div>
+//   );
+// }
 
-export default App;
+// export default App;
