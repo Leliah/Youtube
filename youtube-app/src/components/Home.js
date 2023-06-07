@@ -1,42 +1,39 @@
-import React from 'react'
-import './Home.css'
 import { useEffect, useState } from 'react';
+import { getAllVideos } from '../api/fetch';
+import VideoListing from './VideoListing';
+import './Home.css'
 
 function Home() {
-    const [mostPopularList, setMostPopularList] = useState([]);
 
-    useEffect(() => {
-        fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=20&key=${process.env.REACT_APP_API_KEY}`)
-        .then(res => res.json())
-        .then(response => {
-            //console.log(response, 'tube of you');
+    const [allVideos, setAllVideos] = useState([]);
 
-            let popularVideo = response.items;
-            console.log(popularVideo)
-            
-            let trendingVideo = popularVideo.map((video, index) => {
-                console.log(video);
-
-                let popularVImg = video.snippet.thumbnails.medium.url;
-                return(
-                    <li key={index}>
-                        <img src={popularVImg} alt='pop-vid-thumbnail'/>
-                        <h2>{video.snippet.title}</h2>
-                    </li>
-                )
-            })
-            setMostPopularList(trendingVideo);
-        });
-
+;
+useEffect(() => {
+  getAllVideos()
+    .then((response) => {
+      setAllVideos(response.items);
+      //console.log(allVideos); 
     })
+    .catch((error) => {
+      console.error(error);
+    });
+}, []);
+      
+
+
 
   return (
     <div>
         <div className='most-popular-results'>
-            {mostPopularList}
-        </div>
+            {
+                allVideos.map((video, index) => {
+                  return <VideoListing video={video} key={video.id} index={index}/>
+                })//MAP CLOSING TAG
+            }
+        </div> 
     </div>
   );
 }
 
-export default Home;
+export default Home
+
