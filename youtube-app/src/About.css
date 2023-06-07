@@ -1,0 +1,172 @@
+/* .about {
+    font-family: Arial, sans-serif;
+    position: absolute;
+    left: 3%;
+    top: 20%
+  }
+  
+  .developers {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .developer {
+    text-align: center;
+    margin: 70px;
+  }
+  
+  .developer img {
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: bounce 3.0s ease-in-out infinite alternate;
+  }
+  
+  .developer img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: none;
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .developer h3 {
+    margin-top: 10px;
+  }
+  
+  .developer p {
+    margin-bottom: 10px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .button {
+    display: inline-block;
+    background-color: #ff9800;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 9px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin: 0 10px;
+  }
+  
+  .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .button a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .button a:hover {
+    text-decoration: underline;
+  }
+
+  .meet-the-team {
+    text-align: center;
+  } */
+
+  .about {
+    font-family: Arial, sans-serif;
+    position: absolute;
+    left: 3%;
+    top: 20%;
+  }
+  
+  .developers {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .developer {
+    text-align: center;
+    margin: 70px;
+  }
+  
+  .developer img {
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: bounce 3.0s ease-in-out infinite alternate;
+  }
+  
+  .developer img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: none;
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .developer h3 {
+    margin-top: 10px;
+  }
+  
+  .developer p {
+    margin-bottom: 10px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10px;
+  }
+  
+  .button {
+    display: inline-block;
+    background-color: #ff9800;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 9px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin: 0 50px;
+  }
+  
+  .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .button a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .button a:hover {
+    text-decoration: underline;
+  }
+  
+  .meet-the-team {
+    text-align: center;
+  }
+  
+  
