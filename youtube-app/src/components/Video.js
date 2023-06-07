@@ -1,13 +1,15 @@
 import React from 'react';
-import { category, getOneVideo } from '../api/fetch';
+import {  getOneVideo } from '../api/fetch';
 import { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 function Video() {
-  let navigate = useNavigate();
+
   const [video, setVideo] = useState();
   const { id } = useParams();
   const [showMore, setShowMore] = useState(false);
+  
+
 
   useEffect(() => {
     getOneVideo(id)
@@ -20,21 +22,13 @@ function Video() {
         console.error(error);
       });
 
-      category()
-      .then((response) => {
-        // setVideo(response);
-        console.log(response); 
-        // console.log(response.items[0].snippet.title); 
-      })
-      .catch((error) => {
-        console.error(error);
-      });
   }, [id]);
 
   const toggleShowBtn = () => {
     setShowMore(!showMore)
   }
 
+  
   return (
     <div>
       {video && (
@@ -63,6 +57,11 @@ function Video() {
           </div>
         </>
       )}
+
+      <div className='related-videos'>
+        {
+}
+      </div>
     </div>
   );
 }

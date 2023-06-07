@@ -1,24 +1,23 @@
-.most-popular-results {
+.search-results {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 15px;
     list-style-type: none;
-    padding: 60px ;
+    padding: 0;
     margin: 0;
   }
   
-  .most-popular-results li {
+  .search-results .search-result {
     background-color: #202020;
     padding: 10px;
   }
   
-  .most-popular-results img {
+  .search-results .search-result img {
     width: 100%;
     height: auto;
-    border-radius: 5%;
   }
   
-  .most-popular-results h2 {
+  .search-results .search-result h3 {
     margin-top: 10px;
     font-size: 16px;
     line-height: 1.4;
@@ -27,3 +26,4 @@
     text-overflow: ellipsis;
   }
   
+ 
